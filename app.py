@@ -30,4 +30,11 @@ if st.button("Mostrar Gráfico de Dispersión"):
             "Close": "Precio de cierre (USD)", "Volume": "Volumen cotizado (USD)"}
     )
     st.plotly_chart(fig_scatter)
+
+if st.checkbox("Mostrar Histograma"):
+    # casilla de verificación para el histograma
+
+if st.checkbox("Mostrar Gráfico de Dispersión"):
+    # casilla de verificación para el scatter plot
+
 # Fin del script
