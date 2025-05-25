@@ -8,8 +8,8 @@ df = pd.read_csv("BNB_sprint7.csv")
 # Encabezado
 st.header("Análisis de Datos de BNB")
 
-# Botón para mostrar histograma
-if st.button("Mostrar Histograma"):
+# Casilla de verificación para mostrar histograma
+if st.checkbox("Mostrar Histograma"):
     fig_hist = px.histogram(
         df,
         x="Close",
@@ -19,22 +19,13 @@ if st.button("Mostrar Histograma"):
     )
     st.plotly_chart(fig_hist)
 
-# Botón para mostrar gráfico de dispersión
-if st.button("Mostrar Gráfico de Dispersión"):
+# Casilla de verificación para mostrar gráfico de dispersión
+if st.checkbox("Mostrar Gráfico de Dispersión"):
     fig_scatter = px.scatter(
         df,
         x="Close",
         y="Volume",
         title="Relación entre Precio de Cierre y Volumen Cotizado",
-        labels={
-            "Close": "Precio de cierre (USD)", "Volume": "Volumen cotizado (USD)"}
+        labels={"Close": "Precio de cierre (USD)", "Volume": "Volumen cotizado (USD)"}
     )
     st.plotly_chart(fig_scatter)
-
-if st.checkbox("Mostrar Histograma"):
-    # casilla de verificación para el histograma
-
-if st.checkbox("Mostrar Gráfico de Dispersión"):
-    # casilla de verificación para el scatter plot
-
-# Fin del script
